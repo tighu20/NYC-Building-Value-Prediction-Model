@@ -1,2 +1,2 @@
 Based on the data available at https://opendata.cityofnewyork.us/ I have trained a supervised Machine Learning model to predict future 
-future prices of NYC building. I have used XGBoost, CatBoost & Light GBM for this task.
+future prices of NYC building. I have used XGBoost, CatBoost & Light GBM and compared thier results to select the best model suited for this task and performed hyper parameter optimzation using HyperOPT. In addition to this I used SHAP values to draw infrence from these models and conclude which values most impact a market value of a building in New York.
