@@ -20,5 +20,7 @@ The main models we used in our project are:
 - XGBoost
 - Light GBM
 - CAT Boost
+
+
 Some of the reasons for using these models over other trivial or base models like regression,random forest were:Our data had lots of missing values and I would have to manually impute those values using some imputation techniques like KNN,mean imputation etc. The above mentioned models can automatically handle such missing data and their in-built imputation techniques have proved out to be better than manual imputation. The above mentioned boosting algorithms have built-in L1 and L2 regularisation parameters which prevents the model from over fitting.Since these are advances boosting algorithms, they can utilize the power of parallel processing and that is why it is much faster than normal GBM.This was very useful for us as our data was too big and I had to use multiple cores to execute our
 model.We can also run a cross-validation at each iteration of the boosting process and thus it is easy to get the exact optimum number of boosting iterations in a single run.A normal GBM would stop splitting a node when it encounters a negative loss in the split. Thus it is more of a greedy algorithm. XGBoost on the other hand make splits up to the max depth specified and then start pruning the tree backwards and remove splits beyond which there is no positive gain.
